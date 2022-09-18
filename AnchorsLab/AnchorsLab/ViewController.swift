@@ -13,7 +13,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        setupViews()
+//        setupViews()
+        setupBaseLineView()
     }
     
     func setupViews() {
@@ -60,12 +61,38 @@ class ViewController: UIViewController {
         redView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100).isActive = true
     }
     
+    func setupBaseLineView() {
+        let smallLabel = makeLabelWithSize(withText: "small", size: 12)
+        let largeLabel = makeLabelWithSize(withText: "large", size: 32)
+        
+        view.addSubview(smallLabel)
+        view.addSubview(largeLabel)
+        
+        smallLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16).isActive = true
+        smallLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        
+//        largeLabel.topAnchor.constraint(equalTo: smallLabel.topAnchor).isActive = true
+//        largeLabel.centerYAnchor.constraint(equalTo: smallLabel.centerYAnchor).isActive = true
+        largeLabel.firstBaselineAnchor.constraint(equalTo: smallLabel.firstBaselineAnchor).isActive = true
+        largeLabel.leadingAnchor.constraint(equalTo: smallLabel.trailingAnchor, constant: 16).isActive = true
+    }
+    
     // factory method
     func makeLabel(with text: String) -> UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = text
         label.backgroundColor = .yellow
+        
+        return label
+    }
+    
+    func makeLabelWithSize(withText text: String, size: CGFloat) -> UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = text
+        label.backgroundColor = .yellow
+        label.font = UIFont.systemFont(ofSize: size)
         
         return label
     }
