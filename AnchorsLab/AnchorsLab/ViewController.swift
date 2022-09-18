@@ -23,10 +23,13 @@ class ViewController: UIViewController {
         let lowerLeftLabel = makeSecondaryLabel(withText: "lowerLeft")
         let lowerRightButton = makeButton(withText: "Pay Bill")
         
+        let redView = makeView()
+        
         view.addSubview(upperLeftLabel)
         view.addSubview(upperRightLabel)
         view.addSubview(lowerLeftLabel)
         view.addSubview(lowerRightButton)
+        view.addSubview(redView)
         
         upperLeftLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8).isActive = true
         upperLeftLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
@@ -39,6 +42,22 @@ class ViewController: UIViewController {
         
         lowerRightButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 8).isActive = true
         lowerRightButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
+        
+        redView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        redView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+//    Option1: size explitly
+//        redView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+//        redView.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        
+        // Option2: Size dynamically (pinning)
+        // Width
+        redView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        redView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        
+        // Height
+        redView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100).isActive = true
+        redView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100).isActive = true
     }
     
     // factory method
@@ -69,6 +88,14 @@ class ViewController: UIViewController {
         button.backgroundColor = .blue
         
         return button
+    }
+    
+    func makeView() -> UIView {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .red
+        
+        return view
     }
 
 }
