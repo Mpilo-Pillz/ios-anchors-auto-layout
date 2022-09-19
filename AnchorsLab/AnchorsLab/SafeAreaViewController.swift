@@ -20,14 +20,23 @@ class SafeAreaViewController: UIViewController {
         let topLabel = makeLabel(withText: "top")
         let bottomLabel = makeLabel(withText: "bottom")
         
+        let leadingLabel = makeLabel(withText: "leading")
+        let trailingLabel = makeLabel(withText: "trailing")
+        
         view.addSubview(topLabel)
         view.addSubview(bottomLabel)
+        view.addSubview(leadingLabel)
+        view.addSubview(trailingLabel)
         
         NSLayoutConstraint.activate([
             topLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
             topLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             bottomLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8),
-            bottomLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            bottomLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            leadingLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            leadingLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            trailingLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            trailingLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
         
         
