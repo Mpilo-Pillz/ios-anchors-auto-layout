@@ -14,6 +14,7 @@
 		C4499A0A28D767C100013485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4499A0828D767C100013485 /* LaunchScreen.storyboard */; };
 		C4499A1228D8CA4700013485 /* SafeAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4499A1128D8CA4700013485 /* SafeAreaViewController.swift */; };
 		C4499A1428D8D4DC00013485 /* MarginDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4499A1328D8D4DC00013485 /* MarginDefaultViewController.swift */; };
+		C4499A1628D8D80200013485 /* SpacerViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4499A1528D8D80200013485 /* SpacerViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C4499A0B28D767C100013485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4499A1128D8CA4700013485 /* SafeAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaViewController.swift; sourceTree = "<group>"; };
 		C4499A1328D8D4DC00013485 /* MarginDefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginDefaultViewController.swift; sourceTree = "<group>"; };
+		C4499A1528D8D80200013485 /* SpacerViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				C4499A1128D8CA4700013485 /* SafeAreaViewController.swift */,
 				C44999FE28D767BE00013485 /* ViewController.swift */,
 				C4499A1328D8D4DC00013485 /* MarginDefaultViewController.swift */,
+				C4499A1528D8D80200013485 /* SpacerViewViewController.swift */,
 				C4499A0628D767C100013485 /* Assets.xcassets */,
 				C4499A0828D767C100013485 /* LaunchScreen.storyboard */,
 				C4499A0B28D767C100013485 /* Info.plist */,
@@ -143,6 +146,7 @@
 				C4499A1428D8D4DC00013485 /* MarginDefaultViewController.swift in Sources */,
 				C4499A0528D767BE00013485 /* AnchorsLab.xcdatamodeld in Sources */,
 				C44999FF28D767BE00013485 /* ViewController.swift in Sources */,
+				C4499A1628D8D80200013485 /* SpacerViewViewController.swift in Sources */,
 				C44999FB28D767BE00013485 /* AppDelegate.swift in Sources */,
 				C4499A1228D8CA4700013485 /* SafeAreaViewController.swift in Sources */,
 			);
