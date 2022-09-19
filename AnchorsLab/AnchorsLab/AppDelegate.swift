@@ -18,7 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .orange
-        window?.rootViewController = SafeAreaViewController()
+//        window?.rootViewController = ViewController()
+//        window?.rootViewController = SafeAreaViewController()
+        window?.rootViewController = MarginDefaultViewController()
+        
         
         return true
     }
