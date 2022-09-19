@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .orange
 //        window?.rootViewController = ViewController()
 //        window?.rootViewController = SafeAreaViewController()
-//        window?.rootViewController = MarginDefaultViewController()
-        window?.rootViewController = SpacerViewViewController()
+        window?.rootViewController = MarginDefaultViewController()
+//        window?.rootViewController = SpacerViewViewController()
         
         
         return true
