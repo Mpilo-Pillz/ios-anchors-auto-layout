@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.backgroundColor = .orange
 
 //            window?.rootViewController = ViewController()
-            window?.rootViewController = HuggingCompressionViewController()
+//            window?.rootViewController = HuggingCompressionViewController()
+            window?.rootViewController = CHHCWithImageViewController()
             
             
             return true
