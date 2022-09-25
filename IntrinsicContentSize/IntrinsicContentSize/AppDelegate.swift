@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.makeKeyAndVisible()
             window?.backgroundColor = .orange
 
-            window?.rootViewController = ViewController()
+//            window?.rootViewController = ViewController()
+            window?.rootViewController = HuggingCompressionViewController()
             
             
             return true
